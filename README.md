@@ -29,6 +29,7 @@
 - GTKWave / EDA Playground
 
 ## Instruction Memory 
+PC → [Instruction Memory] → instruction bits → [Decoder]
 - [15:13] — opcode    (3 bits — 8 possible instructions)
 - [12:10] — dest reg  (3 bits — Rd)
 - [9:7]   — src reg1  (3 bits — Rs1)
