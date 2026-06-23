@@ -27,3 +27,10 @@
 ## Tools Used
 - Icarus Verilog
 - GTKWave / EDA Playground
+
+## Instruction Memory 
+- [15:13] — opcode    (3 bits — 8 possible instructions)
+-[12:10] — dest reg  (3 bits — Rd)
+-[9:7]   — src reg1  (3 bits — Rs1)
+-[6:4]   — src reg2  (3 bits — Rs2)
+-[3:0]   — unused / immediate (4 bits)
