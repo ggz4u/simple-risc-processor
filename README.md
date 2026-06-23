@@ -35,4 +35,5 @@ PC → [Instruction Memory] → instruction bits → [Decoder]
 - [9:7]   — src reg1  (3 bits — Rs1)
 - [6:4]   — src reg2  (3 bits — Rs2)
 - [3:0]   — unused / immediate (4 bits)
+
 For MOV and LOAD instructions the immediate/address field uses bits [7:0] instead of two source registers.
