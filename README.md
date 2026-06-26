@@ -52,16 +52,16 @@
 
 ## Module List
 
-| Module | File | Status |
-|--------|------|--------|
-| ALU | alu.v | ✅ Complete |
-| Register File | register_file.v | ✅ Complete |
-| Program Counter | program_counter.v | ✅ Complete |
-| Instruction Memory | instruction_memory.v | ✅ Complete |
-| Decoder | decoder.v | ✅ Complete |
-| Data Memory | data_memory.v | ✅ Complete |
-| Control Unit | control_unit.v | 🔄 In Progress |
-| Top Level | top.v | ⏳ Pending |
+| Module | File |
+|--------|------|
+| ALU | alu.v |
+| Register File | register_file.v |
+| Program Counter | program_counter.v |
+| Instruction Memory | instruction_memory.v |
+| Decoder | decoder.v |
+| Data Memory | data_memory.v |
+| Control Unit | control_unit.v |
+| Top Level | top.v |
 
 ## Tools Used
 - Icarus Verilog — simulation
