@@ -26,7 +26,7 @@ module control_unit(
             3'b011: begin alu_op=3'b011; reg_write=1; end // OR
             3'b100: begin alu_op=3'b100; reg_write=1; end // NOT
             3'b101: begin alu_op=3'b101; reg_write=1; end // MOV
-            3'b110: begin mem_read=1'b1; reg_write=1; wb_select=1'b0; end // LOAD
+            3'b110: begin mem_read=1'b1; reg_write=1; wb_select=1'b1; end // LOAD
             3'b111: begin jump_enable=1'b1; end // JUMP
         endcase
     end
