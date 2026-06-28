@@ -53,7 +53,7 @@ by using wb_select (writeback data select line).
 | ADD         | 000    | Rd = Rs1 + Rs2    | Add two registers      |
 | SUB         | 001    | Rd = Rs1 − Rs2    | Subtract two registers |
 | AND         | 010    | Rd = Rs1 & Rs2    | Bitwise AND            |
-| OR          | 011    | Rd = Rs1 | Rs2    | Bitwise OR             |
+| OR          | 011    | Rd = Rs1 or Rs2    | Bitwise OR             |
 | NOT         | 100    | Rd = ~Rs1         | Bitwise NOT            |
 | MOV         | 101    | Rd = Rs1          | Copy register value    |
 | LOAD        | 110    | Rd = Mem[address] | Load data from memory  |
