@@ -1,0 +1,15 @@
+# Icarus Verilog compiled files
+*.vvp
+
+# GTKWave waveform files
+*.vcd
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.out
+
+# VS Code settings (optional)
+.vscode/settings.json

@@ -12,7 +12,6 @@ module data_memory(
     //Stores data values not INSTRUCTIONS
     reg [7:0] memory [0:255];
     integer i;
-
     //write: sequential clock driven
     always @(posedge clk or posedge rst) begin
         if(rst) begin
@@ -23,6 +22,7 @@ module data_memory(
             memory[addr] <= write_data;
         end
     end
+    
 
     //read: combinational
     always @(*) begin
