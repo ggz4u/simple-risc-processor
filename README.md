@@ -130,13 +130,13 @@ by using wb_select (writeback data select line).
 ## Top-Level Processor
 
 ```markdown
-![Top Block Diagram](block%20diagrams/top_block_diagram.png)
+![Top Block Diagram](block%20diagrams/top_block_diagram.pdf)
 ```
 
 ## ALU
 
 ```markdown
-![ALU Block Diagram](block%20diagrams/alu_block_diagram.png)
+![ALU Block Diagram](block%20diagrams/alu_block_diagram.pdf)
 ```
 
 ## Control Unit
