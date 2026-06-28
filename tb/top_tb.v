@@ -33,7 +33,7 @@ module top_tb;
         // R1's value, so R1 is the register that actually needs seeding -
         // poking R2/R3 directly does nothing useful since R2 gets
         // overwritten by the MOV anyway, and R3 isn't read until later.
-        uut.rf_inst.registers[1] = 8'd12;  // R1 = 12
+        uut.rf_inst.registers[1] = 8'd12;  // R1 = 12 (Random value)- To verify the operations stored in the instruction memory
 
         #200;
 
