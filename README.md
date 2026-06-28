@@ -40,9 +40,11 @@ The processor is composed of the following hardware modules:
 | Data Memory        | Stores data for LOAD operations            |
 | Control Unit       | Generates processor control signals        |
 | Top Module*         | Integrates all processor modules           |
+
+---
 *Top Module: Conatins a MUX which selects from where the write data is arriving, the ALU or Data Memory 
 by using wb_select (writeback data select line).
----
+
 
 # Instruction Set Architecture (ISA)
 
