@@ -126,7 +126,6 @@ by using wb_select (writeback data select line).
 
 # Block Diagrams
 
-> Add your block diagrams inside the **block diagrams/** folder and update the filenames below.
 
 ## Top-Level Processor
 
@@ -138,12 +137,6 @@ by using wb_select (writeback data select line).
 
 ```markdown
 ![ALU Block Diagram](block%20diagrams/alu_block_diagram.png)
-```
-
-## Register File
-
-```markdown
-![Register File](block%20diagrams/register_file_block_diagram.png)
 ```
 
 ## Control Unit
@@ -171,7 +164,7 @@ vvp top_tb.vvp
 View the generated waveform:
 
 ```bash
-gtkwave wave.vcd
+gtkwave top_tb.vcd
 ```
 
 ---
@@ -206,7 +199,7 @@ Each hardware module has an independent testbench located in the **tb/** directo
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 * Add STORE instruction
 * Add Immediate arithmetic instructions
