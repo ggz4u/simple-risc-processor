@@ -11,5 +11,5 @@
 *.tmp
 *.out
 
-# VS Code settings (optional)
-.vscode/settings.json
+# VS Code settings
+.vscode
