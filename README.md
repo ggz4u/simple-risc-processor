@@ -42,8 +42,8 @@ The processor is composed of the following hardware modules:
 | Top Module*         | Integrates all processor modules           |
 
 
-*Top Module: Conatins a MUX which selects from where the write data is arriving, the ALU or Data Memory 
-by using wb_select (writeback data select line).
+#### *Top Module: Contains a MUX which selects from where the write data is arriving, the ALU or Data Memory 
+#### by using wb_select (writeback data select line).
 ---
 
 # Instruction Set Architecture (ISA)
