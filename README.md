@@ -1,3 +1,7 @@
+![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Simulator](https://img.shields.io/badge/Simulator-Icarus%20Verilog-orange)
+
 # Simple RISC Processor — Control Signal Table
 
 ## Instruction Set Architecture
