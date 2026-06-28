@@ -148,7 +148,8 @@ by using wb_select (writeback data select line).
 Compile the processor:
 
 ```bash
-iverilog -o top_tb.vvp tb/top_tb.v src/*.v
+iverilog -o top_tb.vvp tb/top_tb.v src/top.v src/alu.v src/register_file.v src/program_counter.v src/instruction_memory.v
+ src/decoder.v src/data_memory.v src/control_unit.v
 ```
 
 Run the simulation:
