@@ -126,24 +126,20 @@ by using wb_select (writeback data select line).
 
 # Block Diagrams
 
-
+```
 ## Top-Level Processor
 
-```markdown
-![Top Block Diagram](block%20diagrams/top_block_diagram.pdf)
+![Top Block Diagram](block%20diagrams/top_block_diagram.png)
 ```
-
 ## ALU
 
-```markdown
-![ALU Block Diagram](block%20diagrams/alu_block_diagram.pdf)
-```
+![ALU Block Diagram](block%20diagrams/alu_block_diagram.png)
+
 
 ## Control Unit
 
-```markdown
 ![Control Unit](block%20diagrams/control_unit_block_diagram.png)
-```
+
 
 ---
 
@@ -167,6 +163,9 @@ View the generated waveform:
 gtkwave top_tb.vcd
 ```
 
+### Output Waveform(Result) 
+![ALU Block Diagram](block%20diagrams/timing_diagram.png)
+ 
 ---
 
 # Testbenches
