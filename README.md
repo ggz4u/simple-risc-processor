@@ -33,14 +33,15 @@ The processor is composed of the following hardware modules:
 | Module             | Description                                |
 | ------------------ | ------------------------------------------ |
 | ALU                | Performs arithmetic and logical operations |
-| Register File      | Stores processor registers                 |
+| Register File      | Stores processor outputs                   |
 | Program Counter    | Holds the address of the next instruction  |
 | Instruction Memory | Stores program instructions                |
 | Decoder            | Decodes instruction fields                 |
 | Data Memory        | Stores data for LOAD operations            |
 | Control Unit       | Generates processor control signals        |
-| Top Module         | Integrates all processor modules           |
-
+| Top Module*         | Integrates all processor modules           |
+*Top Module: Conatins a MUX which selects from where the write data is arriving, the ALU or Data Memory 
+by using wb_select (writeback data select line).
 ---
 
 # Instruction Set Architecture (ISA)
