@@ -24,13 +24,11 @@ module instruction_memory(
         // For your CPU to execute anything, there has to be something already sitting at memory[0] before the simulation even starts ticking.
         // A real CPU has the same problem — that's literally what "bootstrapping" means. 
         // On real hardware this is solved by things like a BIOS/bootloader burned into ROM, or a .hex/.mem file loaded by a programmer before power-on. 
-        memory[0] = 16'b101_010_001_000_0000; // MOV R2, R1 
-        memory[1] = 16'b000_011_001_010_0000; // ADD R3, R1, R2
-        memory[2] = 16'b001_100_011_001_0000; // SUB R4, R3, R1
-        memory[3] = 16'b010_101_011_010_0000; // AND R5, R3, R2
-        memory[4] = 16'b011_110_011_010_0000; // OR  R6, R3, R2
-        memory[5] = 16'b100_111_011_000_0000; // NOT R7, R3
-        memory[6] = 16'b111_00000_00000000;   // JMP to address  //JMP to address 4 (Here '111' is the opcode for JMP, and '00000100' is the address to jump to)
+        memory[0] = 16'b000_010_000_000_0000; // ADD R1, R0, R0 — R1 = 0 (MOV replacement)
+        memory[1] = 16'b101_000_001_1000010; // STORE R1, addr 66 — Rs=R1 now in rs1 field [9:7]
+        memory[2] = 16'b110_010_00_01000010;    // LOAD R2, addr 66 — read it back into R2
+        memory[3] = 16'b000_100_010_001_0000;   // ADD R3, R2, R1
+        memory[4] = 16'b111_00000_00000000;     // JMP to 0   // JMP to address  //JMP to address 4 (Here '111' is the opcode for JMP, and '00000100' is the address to jump to)
 
     end
 

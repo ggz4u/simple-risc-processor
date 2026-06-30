@@ -25,9 +25,12 @@ module control_unit(
             3'b010: begin alu_op=3'b010; reg_write=1; end // AND
             3'b011: begin alu_op=3'b011; reg_write=1; end // OR
             3'b100: begin alu_op=3'b100; reg_write=1; end // NOT
-            3'b101: begin alu_op=3'b101; reg_write=1; end // MOV
+            3'b101: begin mem_write=1; end                // STORE(store data in data_memory)
+            // For STORE Rs, addr — the source register field occupies the same bit position as Rd does for other R-type instructions, 
+            // but it's now functioning as a source, not a destination
+            // STORE format: [15:13]opcode | [12:10]unused | [9:7]Rs | [6:4]unused | mem_addr in [7:0]
             3'b110: begin mem_read=1'b1; reg_write=1; wb_select=1'b1; end // LOAD
-            3'b111: begin jump_enable=1'b1; end // JUMP
+            3'b111: begin jump_enable=1'b1; end           // JUMP
         endcase
     end
 endmodule

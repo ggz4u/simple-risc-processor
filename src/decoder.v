@@ -12,7 +12,8 @@ module decoder(
     //instruction type flags
     output is_jmp,
     output is_load,
-    output is_rtype
+    output is_rtype,
+    output is_store
     );
 
     assign opcode = instruction[15:13];
@@ -24,7 +25,8 @@ module decoder(
     //instruction type detection
     assign is_jmp = (opcode == 3'b111);
     assign is_load = (opcode == 3'b110);
-    assign is_rtype = !(is_jmp || is_load);
+    assign is_store = (opcode == 3'b101);
+    assign is_rtype = !(is_jmp || is_load || is_store);
     //these flags are 'wire' type because they are used as control signals for executing the instructions.
     //So live values of these flags are needed in the next clock cycle.
 endmodule

@@ -25,7 +25,7 @@ module top_tb;
         $dumpfile("top_tb.vcd");
         $dumpvars(0, top_tb);
 
-        rst = 1; #20;
+        rst = 1; #10;
         rst = 0;
 
         // memory[0] = "MOV R2, R1" -> reads R1 as the source.
@@ -34,7 +34,7 @@ module top_tb;
         // poking R2/R3 directly does nothing useful since R2 gets
         // overwritten by the MOV anyway, and R3 isn't read until later.
         uut.rf_inst.registers[1] = 8'd12;  // R1 = 12 (Random value)- To verify the operations stored in the instruction memory
-
+        
         #200;
 
         $finish;

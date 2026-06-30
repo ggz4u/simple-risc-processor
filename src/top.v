@@ -20,6 +20,7 @@ module top(
     wire is_rtype;
     wire is_load;
     wire is_jmp;
+    wire is_store;
 
     //jump address is the same as immediate address of the decoder/ instruction so:
     assign jump_addr = imm_addr;
@@ -42,7 +43,7 @@ module top(
     //ALU Outputs
     wire [7:0] alu_result;
     wire carry;
-    wire Zero_flag;
+    wire zero_flag;
 
     // Writeback mux output
     wire [7:0] writeback_data;
@@ -76,7 +77,8 @@ module top(
         .immediate_addr(imm_addr),
         .is_jmp(is_jmp),
         .is_load(is_load),
-        .is_rtype(is_rtype)
+        .is_rtype(is_rtype),
+        .is_store(is_store)
     );
 
     // 4. Control Unit
