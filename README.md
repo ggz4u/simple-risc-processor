@@ -53,11 +53,13 @@ The processor is composed of the following hardware modules:
 | ADD         | 000    | Rd = Rs1 + Rs2    | Add two registers      |
 | SUB         | 001    | Rd = Rs1 − Rs2    | Subtract two registers |
 | AND         | 010    | Rd = Rs1 & Rs2    | Bitwise AND            |
-| OR          | 011    | Rd = Rs1 or Rs2    | Bitwise OR             |
+| OR          | 011    | Rd = Rs1 or Rs2    | Bitwise OR            |
 | NOT         | 100    | Rd = ~Rs1         | Bitwise NOT            |
-| MOV         | 101    | Rd = Rs1          | Copy register value    |
+| STORE       | 101    | Mem[address] = Rs1| Store data in memory   |
 | LOAD        | 110    | Rd = Mem[address] | Load data from memory  |
 | JMP         | 111    | PC = address      | Jump to instruction    |
+
+#### *MOV instruction is implemented by ADD Rd, Rs1, R0 ; R0 is hardwired to 0 so this instruction is equivalent to MOV
 
 ---
 
@@ -83,6 +85,17 @@ The processor is composed of the following hardware modules:
 | 12:10 | Destination Register (Rd) |
 | 9:8   | Unused                    |
 | 7:0   | Memory Address            |
+
+---
+
+## STORE Instruction
+
+| Bits  | Field                     |
+| ----- | ------------------------- |
+| 15:13 | Opcode                    |
+| 12:10 | Unused                    |
+| 9:8   | Source Register           |
+| 7:0   | Memory Address (destination)|
 
 ---
 
@@ -201,7 +214,6 @@ Each hardware module has an independent testbench located in the **tb/** directo
 
 # Future Improvements
 
-* Add STORE instruction
 * Add Immediate arithmetic instructions
 * Implement Conditional Branch instructions
 * Add Pipeline architecture
